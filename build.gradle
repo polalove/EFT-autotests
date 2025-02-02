@@ -1,6 +1,6 @@
 plugins {
     id "java-library"
-    id 'io.qameta.allure' version '2.11.2'
+    id 'io.qameta.allure' version '2.12.0'
 }
 
 repositories {
@@ -20,13 +20,13 @@ dependencies {
 
 allure {
     report {
-        version.set("2.27.0")
+        version.set("2.29.0")
     }
     adapter {
         aspectjWeaver.set(true)
         frameworks {
             junit5 {
-                adapterVersion.set("2.27.0")
+                adapterVersion.set("2.29.0")
             }
         }
     }
@@ -52,6 +52,6 @@ tasks.withType(Test) {
 }
 task smoke_test(type: Test) {
     useJUnitPlatform {
-        includeTags("simple")
+        includeTags("smoke")
     }
 }
