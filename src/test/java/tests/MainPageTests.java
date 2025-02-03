@@ -13,7 +13,7 @@ public class MainPageTests extends TestConfiguration {
     @Test
     @DisplayName("Проверка работы смены языка с русского на английский.")
     @Tag("smoke")
-    void LanguageChangeTest() {
+    void languageChangeTest() {
         step("Открываем главную страницу ", () -> {
             open("");
         });
@@ -38,7 +38,7 @@ public class MainPageTests extends TestConfiguration {
     }
 
     @Test
-    @DisplayName("Нажатие кнопок навигационного меню в правой части экрана, проверка текста в них.")
+    @DisplayName("Проверка работы навигационного меню в правой части экрана.")
     @Tag("smoke")
     void rightNavigationMenuButtonClickCheckTest() {
         step("Открываем главную страницу ", () -> {
@@ -92,7 +92,7 @@ public class MainPageTests extends TestConfiguration {
     }
 
     @Test
-    @DisplayName("Проверка заголовка и подзаголовка во вкладке новости и во вкладке патчи")
+    @DisplayName("Проверка заголовка и подзаголовка в новостях")
     @Tag("smoke")
     void checkingHeadlineAndMainTextNewsAndPatchTest() {
         step("Открываем главную страницу ", () -> {
