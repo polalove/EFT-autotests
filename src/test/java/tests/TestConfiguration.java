@@ -1,4 +1,5 @@
 package tests;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
@@ -17,8 +18,8 @@ public class TestConfiguration {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://www.escapefromtarkov.com";
-        Configuration.browser = System.getProperty("browserType");
-        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.browser = System.getProperty("browserType", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "125");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.remote = System.getProperty("remoteHost");
         Configuration.pageLoadStrategy = "eager";
